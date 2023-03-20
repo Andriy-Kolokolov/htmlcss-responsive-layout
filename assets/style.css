@@ -5,6 +5,7 @@
     --color-bg-blocks-violet: #9691e2;
     --color-title-blu: #0083fb;
     --color-title-violet: #9691e2;
+    --default-font-size: 16px;
 }
 
 * {
@@ -14,7 +15,7 @@
 }
 
 body {
-    font-size: 16px;
+    font-size: var(--default-font-size);
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -29,6 +30,7 @@ section:nth-child(odd) {
 
 section {
     margin-top: 3rem;
+    padding: 3rem 0;
 }
 
 .navbar .links li a {
@@ -183,7 +185,7 @@ section .container {
 
 .planning .box.left {
     display: flex;
-    flex-basis: 60%;
+    flex-basis: 50%;
     justify-content: space-between;
     color: white;
     gap: 3rem;
@@ -195,7 +197,7 @@ section .container {
 }
 
 .planning .box.right {
-    flex-basis: 40%;
+    flex-basis: 30%;
     display: flex;
     align-items: center;
     text-align: center;
@@ -213,6 +215,76 @@ section .container {
     font-style: italic;
 }
 
+/*  section testimonials  */
+.testimonials .container > *:nth-child(-n+3) {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.testimonials .container > h1 {
+    font-size: 3rem;
+    color: var(--color-title-violet);
+}
+
+.testimonials .container > p {
+    font-size: 1.2rem;
+}
+
+.testimonial {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-bg-blocks-violet);
+    color: white;
+    border-radius: 40px;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.testimonial .img-container {
+    flex: 0 1 20%;
+    aspect-ratio: 1 / 1;
+    background-size: cover;
+    background-position: center;
+    border-radius: 100%;
+}
+
+.testimonial#reynolds .img-container {
+    background-image: url("../assets/img/testimonial1.jpg");
+}
+
+.testimonial#almeda .img-container {
+    background-image: url("../assets/img/testimonial2.jpg");
+}
+
+.testimonial#roberts .img-container {
+    background-image: url("../assets/img/testimonial3.jpg");
+}
+
+.testimonial .txt {
+    flex: 0 1 75%;
+    line-height: 2rem;
+}
+
+.testimonial .txt h3 {
+    margin-top: 1.5rem;
+}
+
+.testimonial .txt p:before {
+    display: inline-block;
+    content: url("../assets/img/quote-left-solid.svg");
+    width: var(--default-font-size);
+    height: var(--default-font-size);
+    filter: invert(100);
+}
+
+.testimonial .txt p:after {
+    display: inline-block;
+    content: url("../assets/img/quote-right-solid.svg");
+    width: var(--default-font-size);
+    height: var(--default-font-size);
+    filter: invert(100);
+}
 
 @media (max-width: 480px) {
     /* Styles for mobile devices */
