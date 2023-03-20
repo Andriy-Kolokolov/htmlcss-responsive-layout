@@ -54,13 +54,24 @@ li {
     cursor: pointer;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 480px) {
     /* Hamburger menu styles for mobile devices */
+    .navbar .container {
+        width: 100%;
+    }
+
     .hamburger {
         display: block;
     }
 
     .navbar .links {
         display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    /* Hamburger menu styles for tablet devices */
+    .navbar .container {
+        width: 100%;
     }
 }
