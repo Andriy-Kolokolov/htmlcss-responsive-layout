@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: #0083fb;
+    color: #f4f9fd;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    /* Hamburger menu styles for mobile devices */
+    .hamburger {
+        display: block;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+}
