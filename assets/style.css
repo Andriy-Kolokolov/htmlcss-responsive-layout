@@ -20,6 +20,7 @@ body {
 
 li {
     list-style: none;
+    white-space: nowrap;
 }
 
 .navbar .links li a {
@@ -96,6 +97,11 @@ header .container {
     flex-basis: calc((100% - 1rem) / 3 * 2);
     flex-direction: row;
     text-align: left;
+    justify-content: center;
+}
+
+.hero .box:first-child .side {
+    flex-basis: 50%;
 }
 
 .hero .box:first-child img {
