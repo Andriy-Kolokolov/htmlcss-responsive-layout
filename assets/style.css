@@ -1,7 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+:root {
+    --color-bg-blocks-azure: #b4dbfd;
+    --color-bg-blocks-violet: #9691e2;
+    --color-title-blu: #0083fb;
+    --color-title-violet: #9691e2;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 li {
@@ -26,20 +40,27 @@ li {
     border-radius: 30px;
 }
 
-.navbar {
-    color: #f4f9fd;
-    background-color: #0083fb;
+.navbar,
+.hero {
     display: flex;
     justify-content: center;
 }
 
-.navbar .container{
-    width: 80%;
+header .container {
+    width: 60%;
+}
+
+.navbar {
+    color: #f4f9fd;
+    background-color: #0083fb;
+}
+
+.navbar .container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
+    padding: 15px 0;
 }
 
 .navbar .links {
@@ -54,10 +75,82 @@ li {
     cursor: pointer;
 }
 
+.hero .container {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.hero .box {
+    background-color: var(--color-bg-blocks-azure);
+    border-radius: 20px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero .box:first-child {
+    flex-basis: calc((100% - 1rem) / 3 * 2);
+    flex-direction: row;
+    text-align: left;
+}
+
+.hero .box:first-child img {
+    max-width: 100%;
+    margin-bottom: -3rem;
+}
+
+.hero .box:nth-child(2) {
+    flex-basis: calc((100% - 1rem) / 3);
+}
+
+.hero .box:nth-last-child(-n+3) {
+    flex-basis: calc((100% - 2.5rem) / 3);
+}
+
+.hero .box h3 {
+    color: var(--color-title-blu);
+}
+
+.hero .box p {
+    line-height: 1.7rem;
+}
+
+.hero .box > *,
+.hero .box .side.left > * {
+    margin: 1rem 0;
+}
+
+.hero .box .btn.download {
+    display: inline-block;
+    letter-spacing: 0.3rem;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 1.2rem;
+    padding: 10px 50px;
+    border-radius: 30px;
+    color: white;
+    background-color: var(--color-title-blu);
+}
+
+.hero .box > i {
+    color: var(--color-title-blu);
+    font-size: 4rem;
+}
+
 @media (max-width: 480px) {
-    /* Hamburger menu styles for mobile devices */
+    /* Styles for mobile devices */
+
+}
+
+@media (max-width: 767px) {
+    /* Styles for tablet devices */
     .navbar .container {
         width: 100%;
+        padding: 10px 20px;
     }
 
     .hamburger {
@@ -66,12 +159,5 @@ li {
 
     .navbar .links {
         display: none;
-    }
-}
-
-@media (max-width: 767px) {
-    /* Hamburger menu styles for tablet devices */
-    .navbar .container {
-        width: 100%;
     }
 }
