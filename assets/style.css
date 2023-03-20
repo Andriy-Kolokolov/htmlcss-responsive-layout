@@ -23,6 +23,14 @@ li {
     white-space: nowrap;
 }
 
+section:nth-child(odd) {
+    background-color: var(--color-bg-blocks-violet);
+}
+
+section {
+    margin-top: 3rem;
+}
+
 .navbar .links li a {
     text-decoration: none;
     color: #f4f9fd;
@@ -42,13 +50,15 @@ li {
 }
 
 .navbar,
-.hero {
+.hero,
+section {
     display: flex;
     justify-content: center;
 }
 
-header .container {
-    width: 60%;
+header .container,
+section .container {
+    width: 1200px;
 }
 
 .navbar {
@@ -131,6 +141,7 @@ header .container {
 }
 
 .hero .box .btn.download {
+    cursor: pointer;
     display: inline-block;
     letter-spacing: 0.3rem;
     text-align: center;
@@ -146,6 +157,62 @@ header .container {
     color: var(--color-title-blu);
     font-size: 4rem;
 }
+
+/*  section planning  */
+.planning .container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.planning .box {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.planning .box i {
+    background-color: var(--color-title-violet);
+    padding: 25px;
+    border-radius: 50%;
+}
+
+.planning .box img {
+    max-width: 100%;
+}
+
+.planning .box.left {
+    display: flex;
+    flex-basis: 60%;
+    justify-content: space-between;
+    color: white;
+    gap: 3rem;
+}
+
+.planning .box.left h3 {
+    margin-bottom: 5rem;
+    font-size: 2.5rem;
+}
+
+.planning .box.right {
+    flex-basis: 40%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 15rem;
+    background-color: white;
+    border-radius: 60px;
+    gap: 1.5rem;
+}
+
+.planning .box {
+    line-height: 2.0rem;
+}
+
+.planning .box.right p {
+    font-style: italic;
+}
+
 
 @media (max-width: 480px) {
     /* Styles for mobile devices */
