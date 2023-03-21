@@ -6,6 +6,7 @@
     --color-title-blu: #0083fb;
     --color-title-violet: #9691e2;
     --default-font-size: 16px;
+    --default-line-height: 2rem;
 }
 
 * {
@@ -166,7 +167,7 @@ section .container {
 }
 
 .hero .box p {
-    line-height: 1.7rem;
+    line-height: var(--default-line-height);
 }
 
 .hero .box > *,
@@ -234,7 +235,7 @@ section .container {
 }
 
 .planning .box {
-    line-height: 2.0rem;
+    line-height: var(--default-line-height);;
 }
 
 .planning .box.right p {
@@ -289,7 +290,7 @@ section .container {
 
 .testimonial .txt {
     flex: 0 1 75%;
-    line-height: 2rem;
+    line-height: var(--default-line-height);
 }
 
 .testimonial .txt h3 {
@@ -324,6 +325,7 @@ section .container {
     background-color: white;
     border-radius: 20px;
     padding: 2rem;
+    line-height: calc(var(--default-line-height) - .5rem);
 }
 
 .benefits .box > * {
@@ -339,7 +341,46 @@ section .container {
     color: var(--color-title-violet);
 }
 
+/*  about section  */
+.about .container {
+    display: flex;
+    gap: 5rem;
+}
 
+.about .side {
+    display: flex;
+    flex-direction: column;
+}
+
+.about .side > * {
+    padding: 1rem 0;
+}
+
+.about .side.left h1{
+    font-size: 3rem;
+    color: var(--color-title-violet);
+}
+
+.about .side.left {
+    line-height: calc(var(--default-line-height) + .5rem );
+}
+
+.about .side.right .img-container {
+    aspect-ratio: 1 / 1;
+    background-image: url("../assets/img/about.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 100%;
+}
+
+.about .side.right h3{
+    font-size: 1.5rem;
+    color: var(--color-title-violet);
+}
+
+.about .side.right .btn{
+    padding: 5px 15px;
+}
 
 @media (max-width: 480px) {
     /* Styles for mobile devices */
