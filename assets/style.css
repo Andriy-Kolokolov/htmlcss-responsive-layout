@@ -33,6 +33,17 @@ section {
     padding: 3rem 0;
 }
 
+/*  buttons  */
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 50px;
+    border-radius: 30px;
+    text-align: center;
+    white-space: nowrap;
+}
+/*  buttons end  */
+
 .navbar .links li a {
     text-decoration: none;
     color: #f4f9fd;
@@ -44,7 +55,7 @@ section {
     transition: .5s;
 }
 
-.navbar .links li:last-child a {
+.navbar .links .btn.sign-up {
     color: black;
     background-color: #f4f9fd;
     padding: 6px;
@@ -58,9 +69,11 @@ section {
     justify-content: center;
 }
 
-header .container,
+.navbar .container,
+.hero .container,
 section .container {
     width: 1200px;
+    padding: 1rem;
 }
 
 .navbar {
@@ -73,11 +86,11 @@ section .container {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 0;
 }
 
 .navbar .links {
     display: flex;
+    align-items: center;
     flex-direction: row;
     gap: 2rem;
 }
@@ -143,14 +156,8 @@ section .container {
 }
 
 .hero .box .btn.download {
-    cursor: pointer;
-    display: inline-block;
     letter-spacing: 0.3rem;
-    text-align: center;
-    white-space: nowrap;
     font-size: 1.2rem;
-    padding: 10px 50px;
-    border-radius: 30px;
     color: white;
     background-color: var(--color-title-blu);
 }
