@@ -4,9 +4,10 @@
     --color-bg-blocks-azure: #b4dbfd;
     --color-bg-blocks-violet: #9691e2;
     --color-title-blu: #0083fb;
-    --color-title-violet: #000000;
+    --color-title-violet: #9691e2;
     --default-font-size: 16px;
     --default-line-height: 2rem;
+    --margin-top-mobile: 2rem;
 }
 
 * {
@@ -30,7 +31,7 @@ section:nth-child(odd) {
 }
 
 section {
-    margin-top: 3rem;
+    margin-top: 2rem;
     padding: 3rem 0;
 }
 
@@ -93,7 +94,7 @@ section {
 .hero .container,
 section .container {
     width: 1200px;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 .navbar {
@@ -249,7 +250,7 @@ section .container {
 }
 
 .testimonials .container > h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: var(--color-title-violet);
 }
 
@@ -314,7 +315,14 @@ section .container {
 }
 
 /*  benefits section  */
-.benefits .container {
+.benefits .container .title > h1 {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 4rem;
+}
+
+.benefits .container .flex-container {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
@@ -329,7 +337,7 @@ section .container {
 }
 
 .benefits .box > * {
-    padding: .5rem 0 .5rem 0;
+    padding: 1.5rem 0 .5rem 0;
 }
 
 .benefits .box h1 {
@@ -407,8 +415,8 @@ section .container {
 }
 
 .get-started .btn {
-    padding: 30px 70px;
-    border-radius: 60px;
+    padding: 20px 80px;
+    border-radius: 40px;
     font-weight: bold;
 }
 
@@ -436,7 +444,42 @@ section .container {
 
 @media (max-width: 480px) {
     /* Styles for mobile devices */
+    .hero .container,
+    .planning .container,
+    .benefits .container .flex-container,
+    .about .container
+    {
+        display: block;
+    }
 
+    .hero .container > *,
+    .benefits .container .flex-container > *,
+    .about .container > * {
+        margin-top: var(--margin-top-mobile);
+    }
+
+    .planning .container .box.right {
+        margin-top: 0;
+    }
+
+    .about .container .img-container {
+        max-width: 40%;
+    }
+
+    .get-started .container,
+    .footer .container {
+        max-width: 100%;
+    }
+
+    .hero .box:first-child,
+    .testimonials .testimonial {
+        display: block;
+    }
+
+    .testimonials .testimonial > * {
+        padding: 1rem;
+        text-align: center;
+    }
 }
 
 @media (max-width: 767px) {
