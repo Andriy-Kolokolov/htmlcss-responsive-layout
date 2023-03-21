@@ -8,6 +8,7 @@
     --default-font-size: 16px;
     --default-line-height: 2rem;
     --margin-top-mobile: 2rem;
+    --default-container-gap: 1.5rem;
 }
 
 * {
@@ -63,6 +64,7 @@ section {
     color: #9691e2;
     background-color: white;
 }
+
 /*  buttons end  */
 
 .navbar .links li a {
@@ -250,12 +252,8 @@ section .container {
 }
 
 .testimonials .container > h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--color-title-violet);
-}
-
-.testimonials .container > p {
-    font-size: 1.2rem;
 }
 
 .testimonial {
@@ -325,7 +323,7 @@ section .container {
 .benefits .container .flex-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: var(--default-container-gap);
 }
 
 .benefits .box {
@@ -364,13 +362,13 @@ section .container {
     padding: 1rem 0;
 }
 
-.about .side.left h1{
+.about .side.left h1 {
     font-size: 3rem;
     color: var(--color-title-violet);
 }
 
 .about .side.left {
-    line-height: calc(var(--default-line-height) + .5rem );
+    line-height: calc(var(--default-line-height) + .5rem);
 }
 
 .about .side.right .img-container {
@@ -381,12 +379,12 @@ section .container {
     border-radius: 100%;
 }
 
-.about .side.right h3{
+.about .side.right h3 {
     font-size: 1.5rem;
     color: var(--color-title-violet);
 }
 
-.about .side.right .btn{
+.about .side.right .btn {
     padding: 5px 15px;
 }
 
@@ -428,7 +426,7 @@ section .container {
     justify-content: center;
 }
 
-.footer a{
+.footer a {
     color: blueviolet;
 }
 
@@ -445,10 +443,8 @@ section .container {
 @media (max-width: 480px) {
     /* Styles for mobile devices */
     .hero .container,
-    .planning .container,
     .benefits .container .flex-container,
-    .about .container
-    {
+    .about .container {
         display: block;
     }
 
@@ -456,10 +452,6 @@ section .container {
     .benefits .container .flex-container > *,
     .about .container > * {
         margin-top: var(--margin-top-mobile);
-    }
-
-    .planning .container .box.right {
-        margin-top: 0;
     }
 
     .about .container .img-container {
@@ -495,5 +487,30 @@ section .container {
 
     .navbar .links {
         display: none;
+    }
+
+    .hero .box:first-child {
+        display: block;
+    }
+
+    .hero .box:first-child img {
+        max-width: 60%;
+    }
+
+    .planning .container {
+        display: block;
+    }
+
+    .planning .container .box.right {
+        margin-top: 0;
+    }
+
+    .benefits .container .flex-container .box {
+        flex: 0 1 calc((100% - var(--default-container-gap)) / 2);
+    }
+
+    .get-started .container,
+    .footer .container {
+        max-width: 80%;
     }
 }
