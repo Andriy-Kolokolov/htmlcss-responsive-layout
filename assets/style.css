@@ -67,18 +67,18 @@ section {
 
 /*  buttons end  */
 
-.navbar .links li a {
+.navbar .nav-menu li a {
     text-decoration: none;
     color: #f4f9fd;
 }
 
-.navbar .links li a:hover {
+.navbar .nav-menu li a:hover {
     text-decoration: underline;
     color: crimson;
     transition: .5s;
 }
 
-.navbar .links .btn.sign-up {
+.navbar .nav-menu .btn.sign-up {
     color: black;
     background-color: #f4f9fd;
     padding: 6px;
@@ -111,17 +111,25 @@ section .container {
     align-items: center;
 }
 
-.navbar .links {
+.navbar .nav-menu {
     display: flex;
     align-items: center;
-    flex-direction: row;
     gap: 2rem;
 }
 
 .hamburger {
     display: none;
-    font-size: 30px;
     cursor: pointer;
+}
+
+.hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    background-color: white;
 }
 
 .hero .container {
@@ -474,7 +482,7 @@ section .container {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     /* Styles for tablet devices */
     .navbar .container {
         width: 100%;
@@ -485,8 +493,45 @@ section .container {
         display: block;
     }
 
-    .navbar .links {
-        display: none;
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        height: 3rem;
+        width: 100%;
+    }
+
+    .navbar .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 3rem;
+        gap: 0;
+        flex-direction: column;
+        background-color: #0082f9;
+        width: 100%;
+        text-align: center;
+        transition: .3s;
+    }
+
+    .navbar .nav-menu li {
+        margin: 16px 0;
+    }
+
+    .navbar .nav-menu.active {
+        left: 0;
     }
 
     .hero .box:first-child {
