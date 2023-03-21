@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&display=swap');
 
 :root {
     --color-bg-blocks-azure: #b4dbfd;
@@ -67,6 +68,17 @@ section {
 
 /*  buttons end  */
 
+.logo a {
+    text-decoration: none;
+    font-family: 'Maven Pro', sans-serif;
+    color: white;
+    transition: color .3s ease-in-out;
+}
+
+.logo a:hover {
+    color: yellow;
+}
+
 .navbar .nav-menu li a {
     text-decoration: none;
     color: #f4f9fd;
@@ -74,8 +86,6 @@ section {
 
 .navbar .nav-menu li a:hover {
     text-decoration: underline;
-    color: crimson;
-    transition: .5s;
 }
 
 .navbar .nav-menu .btn.sign-up {
