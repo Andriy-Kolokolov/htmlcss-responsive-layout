@@ -4,7 +4,7 @@
     --color-bg-blocks-azure: #b4dbfd;
     --color-bg-blocks-violet: #9691e2;
     --color-title-blu: #0083fb;
-    --color-title-violet: #9691e2;
+    --color-title-violet: #000000;
     --default-font-size: 16px;
     --default-line-height: 2rem;
 }
@@ -384,9 +384,6 @@ section .container {
 
 /*  section get-started  */
 .get-started .container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
     max-width: 40%;
     text-align: center;
 }
@@ -413,6 +410,28 @@ section .container {
     padding: 30px 70px;
     border-radius: 60px;
     font-weight: bold;
+}
+
+/*  footer  */
+.footer {
+    background-color: #333333;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.footer a{
+    color: blueviolet;
+}
+
+.footer .container {
+    padding: 3rem;
+    max-width: 40%;
+    text-align: center;
+}
+
+.footer .container p:last-child {
+    margin-top: 3rem;
 }
 
 @media (max-width: 480px) {
