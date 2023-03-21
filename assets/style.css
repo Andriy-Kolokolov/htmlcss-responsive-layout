@@ -382,6 +382,39 @@ section .container {
     padding: 5px 15px;
 }
 
+/*  section get-started  */
+.get-started .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 40%;
+    text-align: center;
+}
+
+.get-started .container > * {
+    padding: 1rem;
+    color: white;
+}
+
+.get-started h3 {
+    font-weight: lighter;
+}
+
+.get-started h2 {
+    font-size: 2rem;
+}
+
+.get-started .big-title {
+    color: #fdc15f;
+    font-size: 4rem;
+}
+
+.get-started .btn {
+    padding: 30px 70px;
+    border-radius: 60px;
+    font-weight: bold;
+}
+
 @media (max-width: 480px) {
     /* Styles for mobile devices */
 
