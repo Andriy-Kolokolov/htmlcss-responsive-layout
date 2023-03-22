@@ -170,8 +170,14 @@ section .container {
     flex-basis: 50%;
 }
 
+.hero .box:first-child .side.right {
+    display: flex;
+}
+
 .hero .box:first-child img {
-    max-width: 100%;
+    object-fit: contain;
+    height: 250px;
+    align-self: end;
     margin-bottom: -3rem;
 }
 
@@ -549,7 +555,10 @@ section .container {
     }
 
     .hero .box:first-child img {
-        max-width: 60%;
+        object-fit: contain;
+        height: 300px;
+        align-self: end;
+        margin-bottom: -3rem;
     }
 
     .planning .container {
