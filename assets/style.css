@@ -160,7 +160,7 @@ section .container {
 }
 
 .hero .box:first-child {
-    flex-basis: calc((100% - 1rem) / 3 * 2);
+    flex-basis: calc((100% - 2rem) / 3 * 2 + 1rem);
     flex-direction: row;
     text-align: left;
     justify-content: center;
@@ -182,11 +182,11 @@ section .container {
 }
 
 .hero .box:nth-child(2) {
-    flex-basis: calc((100% - 1rem) / 3);
+    flex-basis: calc((100% - 2rem) / 3);
 }
 
 .hero .box:nth-last-child(-n+3) {
-    flex-basis: calc((100% - 2.5rem) / 3);
+    flex-basis: calc((100% - 2rem) / 3);
 }
 
 .hero .box h3 {
